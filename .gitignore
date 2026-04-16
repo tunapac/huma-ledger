@@ -2,3 +2,4 @@ node_modules/
 *.apk
 *.bin
 __pycache__/
+*.bin
