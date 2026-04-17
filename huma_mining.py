@@ -2,25 +2,24 @@ import time
 from huma_translator import to_huma_address
 
 class HumaSatelliteMiner:
-    def __init__(self, eth_addr):
-        self.huma_id = to_huma_address(eth_addr)
-        self.uptime_seconds = 0
+    def __init__(self, admin_huma_id):
+        self.huma_id = admin_huma_id
         self.reward_balance = 0.0
 
-    def start_mining(self):
-        print(f"\n[MINING]: Satellite Link Active for {self.huma_id}")
+    def start_validation(self):
+        print(f"\n[MINING]: SOVEREIGN NODE {self.huma_id} ONLINE.")
+        print("[STATUS]: Validating Protocol +888 across 150M Satellites...")
         try:
             while True:
-                time.sleep(10) # Track every 10 seconds
-                self.uptime_seconds += 10
-                # Reward: 0.01 ATOM per 10 seconds of validation
-                self.reward_balance += 0.01
-                print(f"[STATUS]: Uptime: {self.uptime_seconds}s | Rewards: {self.reward_balance:.2f} ATOM", end="\r")
+                time.sleep(5)
+                # Earn 0.05 ATOM per validation cycle
+                self.reward_balance += 0.05
+                print(f" -> Rewards Secured: {self.reward_balance:.2f} ATOM", end="\r")
         except KeyboardInterrupt:
-            print(f"\n[SAVED]: Total Rewards Secured: {self.reward_balance:.2f} ATOM")
+            print(f"\n[LOCKED]: Total Earnings for {self.huma_id}: {self.reward_balance:.2f} ATOM")
 
 if __name__ == "__main__":
-    # Simulate mining on your Admin Address
-    admin_addr = "0x0000000000000000000000000000000000000888"
-    miner = HumaSatelliteMiner(admin_addr)
-    miner.start_mining()
+    # Using your Hardcoded Admin ID
+    admin_id = "huma_G888SovereignAdmin"
+    miner = HumaSatelliteMiner(admin_id)
+    miner.start_validation()
