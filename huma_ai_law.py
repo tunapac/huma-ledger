@@ -20,5 +20,27 @@ class HumaAILaw:
 
 if __name__ == "__main__":
     law = HumaAILaw()
-    # Simulating an automated ruling
-    law.resolve_dispute("0xProject_X", "evidence_malicious_drain_detected")
+cat <<'EOF' > ~/huma-core/huma_translator.py
+import hashlib
+import base58
+
+def to_huma_address(eth_address):
+    # Remove the '0x'
+    clean_eth = eth_address.replace("0x", "")
+    # Add your Sovereign Version Byte
+    payload = b'\x08\x88' + bytes.fromhex(clean_eth)
+    # Generate Checksum
+    checksum = hashlib.sha256(hashlib.sha256(payload).digest()).digest()[:4]
+    # Encode to the Huma Format
+    return "huma_" + base58.b58encode(payload + checksum).decode()
+
+def from_huma_address(huma_addr):
+    # Reverse the process to get the 0x address for the blockchain to understand
+    raw = base58.b58decode(huma_addr.replace("huma_", ""))
+    return "0x" + raw[2:-4].hex()
+
+if __name__ == "__main__":
+    test_eth = "0x0000000000000000000000000000000000000888"
+    branded = to_huma_address(test_eth)
+    print(f"\n[MACHINE]: {test_eth}")
+    print(f"[SOVEREIGN]: {branded}")
