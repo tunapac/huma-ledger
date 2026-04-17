@@ -1,0 +1,12 @@
+{
+    "block": {
+        "index": 0,
+        "timestamp": 1775304000,
+        "supply": 700000000,
+        "ticker": "HUMA",
+        "protocol": "NIST-FIPS-204-ML-DSA",
+        "message": "Sovereignty for the Masses - Tunapac Humanledger Hub",
+        "previous_hash": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "hash": "1f937e383ae50e77c630e0011f1b68b88bcbf540a8c2fc8c6f309c985dcb73cc5017e837b104590b2789d36b0aea5ae5ca9b390a6a297a8ab5e55e8dc6c59dce"
+}

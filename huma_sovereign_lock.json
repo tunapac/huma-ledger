@@ -1,0 +1,18 @@
+{
+  "project": "Tunapac Humanledger Hub",
+  "messaging": "ISO 20022 / QFS 20022",
+  "security": "QFS 200007 SECURE",
+  "valuation": {
+    "1_Ħ": 1000000000.00,
+    "1_Å": 1.00,
+    "1_¢": 0.01
+  },
+  "human_equity": {
+    "usd_worth": 350000000.00,
+    "huma_worth": 0.35
+  },
+  "sdk_fee": {
+    "usd_worth": 10.00,
+    "classic_worth": 1000.0
+  }
+}

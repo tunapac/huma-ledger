@@ -1,0 +1,17 @@
+node_modules/
+artifacts/
+cache/
+.cache/
+.npm/
+.config/
++
+node_modules/
+artifacts/
+cache/
+.cache/
+.npm/
+*.swp
+node_modules/
+huma-core/__pycache__/
+*.apk
+*.bin

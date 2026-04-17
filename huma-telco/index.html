@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HUMA CORE OS</title>
+    <script>
+        // THE BRAIN: This handles all the page switching logic
+        function showPage(pageId) {
+            console.log("Switching to: " + pageId);
+            
+            // 1. Hide every screen
+            var screens = document.getElementsByClassName('screen');
+            for (var i = 0; i < screens.length; i++) {
+                screens[i].style.display = 'none';
+            }
+            
+            // 2. Show only the one we clicked
+            document.getElementById(pageId).style.display = 'block';
+            
+            // 3. Update the navigation colors
+            var navs = document.getElementsByClassName('nav-item');
+            for (var j = 0; j < navs.length; j++) {
+                navs[j].style.color = '#555';
+            }
+            document.getElementById('nav-' + pageId).style.color = '#0f0';
+        }
+    </script>
+    <style>
+        body { background: #000; color: #0f0; font-family: monospace; margin: 0; display: flex; justify-content: center; }
+        .phone { width: 340px; height: 650px; border: 12px solid #222; border-radius: 40px; position: relative; background: #050505; overflow: hidden; margin-top: 20px; }
+        .header { padding: 20px 20px 10px; display: flex; justify-content: space-between; font-size: 12px; border-bottom: 1px solid #111; }
+        .screen { padding: 20px; height: 500px; display: none; overflow-y: auto; }
+        .active { display: block; }
+        
+        /* UI Components */
+        .card { background: #111; border: 1px solid #0f0; padding: 15px; border-radius: 15px; margin-bottom: 15px; }
+        .btn { background: #0f0; color: #000; padding: 15px; border-radius: 10px; text-align: center; font-weight: bold; cursor: pointer; margin-top: 10px; }
+        input { width: 100%; padding: 12px; background: #000; border: 1px solid #444; color: #0f0; margin-top: 10px; box-sizing: border-box; border-radius: 5px; }
+        
+        /* Bottom Nav */
+        .nav { position: absolute; bottom: 0; width: 100%; height: 70px; background: #111; display: flex; justify-content: space-around; align-items: center; border-top: 1px solid #222; }
+        .nav-item { color: #555; text-align: center; cursor: pointer; font-size: 10px; flex: 1; }
+        .icon { font-size: 20px; display: block; margin-bottom: 5px; }
+    </style>
+</head>
+<body>
+
+<div class="phone">
+    <div class="header"><span>HUMA 5G</span><span>00:15</span></div>
+
+    <div id="home" class="screen active">
+        <h3 style="color:white;">DASHBOARD</h3>
+        <div class="card">
+            <div style="font-size: 10px; color: #888;">GLOBAL CHIP STATUS</div>
+            <div style="font-size: 24px; font-weight: bold;">CONNECTED</div>
+            <div style="font-size: 10px; color: gold;">PROVISIONED VIA RIG-888</div>
+        </div>
+        <div class="btn" onclick="showPage('wallet')">RECHARGE NOW</div>
+    </div>
+
+    <div id="wallet" class="screen">
+        <h3 style="color:white;">HUMA WALLET</h3>
+        <div class="card">
+            <div style="font-size: 10px;">BALANCE</div>
+            <div style="font-size: 24px; color:gold;">1,240.50 ATOM</div>
+        </div>
+        <label>Enter 12-Digit PIN:</label>
+        <input type="number" id="pin" placeholder="0000 0000 0000">
+        <div class="btn" onclick="alert('PIN Validated on Huma Ledger!')">ACTIVATE CREDIT</div>
+    </div>
+
+    <div id="calls" class="screen">
+        <h3 style="color:white;">CALL HISTORY</h3>
+        <div class="card" style="font-size: 12px;">
+            <div><b>+234 810...</b> <span style="float:right; color:red;">MISSED</span></div>
+            <hr style="border:0; border-top:1px solid #222; margin:10px 0;">
+            <div><b>+1 202...</b> <span style="float:right; color:#0f0;">05:12</span></div>
+            <hr style="border:0; border-top:1px solid #222; margin:10px 0;">
+            <div><b>+44 77...</b> <span style="float:right; color:#0f0;">01:45</span></div>
+        </div>
+    </div>
+
+    <div id="settings" class="screen">
+        <h3 style="color:white;">SYSTEM</h3>
+        <div class="btn" style="background:#222; color:white;">RIG CLUSTER SYNC</div>
+        <div class="btn" style="background:#222; color:white;">BLOCKCHAIN SETTINGS</div>
+        <div class="btn" style="background:red; color:white; margin-top:40px;">SHUTDOWN NODE</div>
+    </div>
+
+    <div class="nav">
+        <div class="nav-item" id="nav-home" onclick="showPage('home')" style="color:#0f0;"><span class="icon">🏠</span>HOME</div>
+        <div class="nav-item" id="nav-wallet" onclick="showPage('wallet')"><span class="icon">💰</span>WALLET</div>
+        <div class="nav-item" id="nav-calls" onclick="showPage('calls')"><span class="icon">📞</span>CALLS</div>
+        <div class="nav-item" id="nav-settings" onclick="showPage('settings')"><span class="icon">⚙️</span>GEAR</div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+    "NIGERIA": {
+        "country_code": "+234",
+        "huma_per_gb": 3.0,
+        "min_purchase": 0.5
+    },
+    "USA": {
+        "country_code": "+1",
+        "huma_per_gb": 50.0,
+        "min_purchase": 1.0
+    }
+}

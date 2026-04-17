@@ -1,0 +1,27 @@
+==========================================================
+HUMA-LEDGER: QUANTUM-RESISTANT NODE OPERATOR AGREEMENT
+==========================================================
+VERSION: 2026.1-PQC
+ENFORCEMENT: Agentic Security Layer 🛡️
+
+1. MANDATORY CRYPTOGRAPHIC STANDARDS
+Operators of 888 Rig Clusters must implement NIST-approved 
+Post-Quantum Cryptography (PQC). 
+- Primary Signature Scheme: ML-DSA (Module-Lattice-Based).
+- Key Encapsulation: ML-KEM (FIPS 203) for all P2P handshakes.
+- Purpose: Prevention of "Harvest Now, Decrypt Later" attacks.
+
+2. HARDWARE COMPLIANCE
+Nodes must support high-entropy True Random Number Generation (TRNG) 
+to ensure quantum-resistant seed generation for HUMA wallets.
+
+3. AGENTIC OVERSIGHT
+The Huma AI Hub will perform "Quantum Audits" every 24 hours. 
+Any node utilizing deprecated RSA or ECC algorithms will be 
+automatically sharded out of the consensus to protect the masses.
+
+4. ASSET INTEGRITY
+Operators acknowledge that all 700,000,000 HUMA are protected 
+by Hash-Based Signatures, rendering them immune to Shor’s 
+Algorithm and Grover’s Algorithm attacks.
+==========================================================

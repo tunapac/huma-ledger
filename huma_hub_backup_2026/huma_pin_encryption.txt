@@ -1,0 +1,21 @@
+==========================================================
+HUMA-LEDGER: SECURE VOUCHER GENERATION LOGIC
+==========================================================
+PIN LENGTH: 12 Digits
+ENCRYPTION: SHA-256 + RSA-4096 (Asymmetric)
+SECURITY: One-Time Use Flag (OTU)
+
+[THE ENCRYPTION FLOW]
+1. GENERATION: The AI Hub generates a random 12-digit string.
+2. HASHING: string + [SECRET_SEED] -> SHA-256 Hash.
+3. STORAGE: Only the Hash is written to the Huma-ledger. 
+   (The actual 12-digit PIN is NEVER stored in plain text).
+4. VALIDATION: 
+   - User enters 12-digit PIN in the App.
+   - App hashes the input and compares it to the Ledger Hash.
+   - If Match + OTU = True -> Service Activated.
+
+[SECURITY OVERRIDE]
+- If the 888 Rig detects more than 3 failed attempts from 
+  one IP, Agentic Security locks the IMSI for 24 hours.
+==========================================================

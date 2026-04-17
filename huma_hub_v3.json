@@ -1,0 +1,12 @@
+{
+  "project": "Tunapac Humanledger Hub",
+  "ai_tier": "Huma Gemini-5-4 (Agentic)",
+  "web3_social": "Huma Book (ZKP-Enabled)",
+  "nft_standard": "Quantum-Resistant Lattice",
+  "compliance": "QFS 20022 / ISO 20022",
+  "active_services": {
+    "mint_fee": "100 ¢",
+    "social_reward": "Dynamic ¢",
+    "stipend_management": "10,000 Å / Month"
+  }
+}

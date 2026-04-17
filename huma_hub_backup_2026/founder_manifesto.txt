@@ -1,0 +1,9 @@
+==========================================================
+THE TUNAPAC HUMANLEDGER HUB: FOUNDER'S MANIFESTO (2026)
+==========================================================
+1. TOTAL SUPPLY: 700,000,000 HUMA (Fixed)
+2. STABLE UNIT:  ATOm ($1.00 Pegged)
+3. SECURITY:     NIST FIPS 204 ML-DSA (Quantum-Safe)
+4. NODES:        888 Rig Global Sync Active
+5. MISSION:      Universal Data Sovereignty
+==========================================================

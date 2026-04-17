@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HUMA PI-TELCO</title>
+    <style>
+        body { background: #1a0633; color: #ffa500; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; display: flex; flex-direction: column; align-items: center; }
+        .phone { width: 330px; height: 620px; border: 12px solid #541d8d; border-radius: 40px; position: relative; background: #000; overflow: hidden; margin-top: 20px; box-shadow: 0 0 30px rgba(255,165,0,0.3); }
+        .header { background: #541d8d; padding: 20px 15px; text-align: center; font-weight: bold; color: white; display: flex; justify-content: space-between; }
+        .screen { padding: 20px; height: 480px; display: none; }
+        .active { display: block; }
+        .pi-card { background: #2d0b5a; border: 1px solid #ffa500; padding: 15px; border-radius: 15px; margin-bottom: 15px; }
+        .pi-btn { background: #ffa500; color: #1a0633; padding: 15px; border-radius: 12px; text-align: center; font-weight: bold; cursor: pointer; margin-top: 10px; }
+        .nav { position: absolute; bottom: 0; width: 100%; height: 70px; background: #541d8d; display: flex; }
+        .nav-item { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 10px; color: #c3a1e6; cursor: pointer; }
+        .nav-item.on { color: #fff; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<div class="phone">
+    <div class="header"><span>π HUMA CONNECT</span><span>888</span></div>
+
+    <div id="p1" class="screen active">
+        <h3 style="color:white; margin-top:0;">Mainnet Readiness</h3>
+        <div class="pi-card">
+            <small>PI WALLET STATUS</small>
+            <div style="font-size: 20px; color: #0f0;">● TESTNET LINKED</div>
+            <hr style="border:0; border-top:1px solid #541d8d; margin:10px 0;">
+            <small>SIM CHIP ID (15-DIGIT)</small>
+            <div style="font-size: 14px; color: #fff;">616 88 0001 888 221</div>
+        </div>
+        <div class="pi-btn" onclick="alert('Authenticating with Pi Browser SDK...')">CONNECT PI WALLET</div>
+    </div>
+
+    <div id="p2" class="screen">
+        <h3 style="color:white; margin-top:0;">TOP UP WITH PI</h3>
+        <div class="pi-card">
+            <small>CURRENT BALANCE</small>
+            <div style="font-size: 24px; color: #ffa500;">314.159 π</div>
+        </div>
+        <input type="number" placeholder="Enter 12-Digit Voucher" style="width:100%; padding:12px; border-radius:10px; border:none; background:#eee;">
+        <div class="pi-btn" onclick="alert('Swapping Pi for Data Units...')">PAY WITH PI</div>
+    </div>
+
+    <div class="nav">
+        <div class="nav-item on" id="n1" onclick="go('p1','n1')">🏠 HOME</div>
+        <div class="nav-item" id="n2" onclick="go('p2','n2')">⚡ RECHARGE</div>
+    </div>
+</div>
+
+<script>
+    function go(pageId, navId) {
+        document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+        document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('on'));
+        document.getElementById(pageId).classList.add('active');
+        document.getElementById(navId).classList.add('on');
+    }
+</script>
+
+</body>
+</html>

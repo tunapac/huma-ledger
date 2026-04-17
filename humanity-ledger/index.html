@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HUMANITY.HUMA | Identity Hub</title>
+    <style>
+        body { background: #000; color: #00ff00; font-family: 'Courier New', monospace; margin: 0; padding: 20px; text-align: center; }
+        .ledger-container { border: 2px solid #00ff00; padding: 30px; border-radius: 20px; background: #050505; max-width: 380px; margin: auto; box-shadow: 0 0 20px rgba(0, 255, 0, 0.2); }
+        .pulse-scanner { width: 80px; height: 80px; border: 4px solid #00ff00; border-radius: 50%; margin: 20px auto; animation: scan 2s infinite ease-in-out; cursor: pointer; }
+        @keyframes scan { 0% { box-shadow: 0 0 0 0 rgba(0, 255, 0, 0.7); transform: scale(0.95); } 70% { box-shadow: 0 0 0 20px rgba(0, 255, 0, 0); transform: scale(1.05); } 100% { box-shadow: 0 0 0 0 rgba(0, 255, 0, 0); transform: scale(0.95); } }
+        .stat-box { border-top: 1px solid #222; margin-top: 20px; padding-top: 15px; }
+        .supply-text { color: #ff3333; font-size: 26px; font-weight: bold; }
+        .member-text { color: #00ffff; font-size: 22px; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="ledger-container">
+        <h1 style="letter-spacing: 3px;">HUMANITY.HUMA</h1>
+        <div class="pulse-scanner" onclick="alert('Biometric Identity: TUNAPAC SECURED')">👤</div>
+        <div style="font-size: 12px; margin-bottom: 20px;">BIOMETRIC SECURITY ACTIVE</div>
+
+        <div class="stat-box">
+            <small style="color: #666;">TOTAL CIRCULATING SUPPLY</small>
+            <div class="supply-text">700,000,000</div>
+        </div>
+
+        <div class="stat-box">
+            <small style="color: #666;">GOAL: 1,000,000 MEMBERS</small>
+            <div class="member-text" id="m-count">000,001</div>
+        </div>
+    </div>
+
+    <script>
+        let members = 1;
+        setInterval(() => {
+            if(members < 1000000) {
+                members += Math.floor(Math.random() * 2) + 1;
+                document.getElementById('m-count').innerHTML = members.toLocaleString().padStart(7, '0');
+            }
+        }, 4000);
+    </script>
+</body>
+</html>

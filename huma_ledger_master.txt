@@ -1,0 +1,45 @@
+==========================================================
+HUMA-LEDGER SOVEREIGN BLOCKCHAIN: ASSET & ECONOMY SPEC
+==========================================================
+
+1. CORE ECONOMIC PRINCIPLE
+--------------------------
+Native Asset: HUMA Coin
+Total Supply: 700,000,000 (Fixed)
+Economy Type: HUMA-BACKED. All ecosystem assets, vouchers, 
+and sub-tokens are valued and collateralized by HUMA.
+(No external coin backing; HUMA is the primary reserve).
+
+2. APP DESCRIPTION (SOVEREIGN EDITION)
+--------------------------------------
+Huma Telco is the flagship utility of the Huma-ledger. 
+By utilizing decentralized 888 Rig nodes, we provide 
+global telecommunications where all assets are natively 
+backed by the HUMA Coin.
+
+The HUMA Economy (700M Supply) powers the entire 
+Humanledger Hub. From global data bundles to the AI Hub, 
+HUMA is the engine of value.
+
+Global Connectivity:
+Sovereign 15-digit Huma SIM IDs (61688...) with 
+native support for Nigeria (+234) and USA (+1).
+
+3. HUMA AI HUB (LEDGER-INTEGRATED)
+----------------------------------
+• AI Auto-Mining: Optimizing HUMA issuance on 888 Rigs.
+• AI Security: 24/7 monitoring of the Huma-ledger backend.
+• H-Web Intelligence: GPT-5/Gemini fueled AI Office & Chat.
+• AI Trading Bot: Intelligence for HUMA-based pairs.
+
+4. 888 RIG BACKEND (UBUNTU)
+---------------------------
+Terminal API: http://[YOUR_IP]:3141
+Logic: Validate 12-digit Recharge PINs against the 
+Huma-ledger smart contracts.
+
+5. VISUAL IDENTITY
+------------------
+Logo: Capital "H" with two horizontal strike lines.
+Colors: Gold (#ffa500) and Deep Purple (#541d8d).
+==========================================================

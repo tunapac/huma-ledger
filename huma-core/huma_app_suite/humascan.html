@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HumaScan | Sovereign Explorer</title>
+    <style>
+        body { background: #010409; color: #c9d1d9; font-family: 'Courier New', monospace; margin: 0; }
+        .top-bar { background: #161b22; border-bottom: 2px solid #58a6ff; padding: 15px; text-align: center; }
+        .badge { background: #238636; color: white; padding: 3px 8px; border-radius: 10px; font-size: 0.8em; }
+        .map-container { 
+            height: 300px; margin: 20px; border: 1px solid #30363d; 
+            background: radial-gradient(circle, #0d1117 0%, #010409 100%);
+            display: flex; align-items: center; justify-content: center;
+        }
+        .pulse { color: #58a6ff; animation: blink 2s infinite; }
+        @keyframes blink { 0% { opacity: 0.2; } 50% { opacity: 1; } 100% { opacity: 0.2; } }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <h1>HUMASCAN PRO <span class="badge">Sovereign v1.888</span></h1>
+    </div>
+    
+    <div class="map-container">
+        <div class="pulse">● [LIVE MESH MAP: 8G RIGS CONNECTING...] ●</div>
+    </div>
+
+    <div style="padding: 20px;">
+        <h3>Latest Sovereign Transactions</h3>
+        <p><b>Huma-7F3A2B9C</b> <span class="badge">Verified</span> - +188.8 HUMA <small>(2s ago)</small></p>
+        <p><b>Huma-D8E1F2G3</b> <span class="badge">Verified</span> - +12.0 HUMA <small>(15s ago)</small></p>
+    </div>
+</body>
+</html>
