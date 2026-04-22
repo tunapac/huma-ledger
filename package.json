@@ -2,5 +2,8 @@
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-mocha-ethers": "^3.0.3"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "ethers": "^6.16.0"
+  }
 }
