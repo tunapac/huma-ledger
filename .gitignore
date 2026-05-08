@@ -15,3 +15,9 @@ node_modules/
 huma-core/__pycache__/
 *.apk
 *.bin
+node_modules/
+.bin/
+build/
+.openzeppelin/
+.env
+*.db
