@@ -1,0 +1,8 @@
+.venv/
+*.db
+*.log
+private-key.pem
+target/
+__pycache__/
+*.bin
+*.abi
